@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material";
 
-export default theme = createTheme({
+export default createTheme({
   palette: {
     primary: "#DFC472",
   },
