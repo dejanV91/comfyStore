@@ -1,7 +1,12 @@
 import { createTheme } from "@mui/material";
 
+const arcBlack = "#424242";
+
 export default createTheme({
   palette: {
+    common: {
+      black: `${arcBlack}`,
+    },
     primary: {
       main: "#DFC472",
     },

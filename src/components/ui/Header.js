@@ -21,6 +21,23 @@ const useStyles = makeStyles()((theme) => ({
   logoIcon: {
     maxHeight: "4em",
   },
+  navLinks: {
+    fontSize: "1.1em",
+    textDecoration: "none",
+    color: theme.palette.common.black,
+    textTransform: "capitalize",
+    fontFamily: "sans-serif",
+    letterSpacing: "4px",
+  },
+  navButtons: {
+    marginRight: "1.2em",
+    marginLeft: "1.2em",
+    "&:hover": {
+      backgroundColor: "transparent",
+      borderBottom: `solid 2px ${theme.palette.primary.main}`,
+    },
+    borderRadius: 0,
+  },
 }));
 const Header = () => {
   const { classes } = useStyles();
@@ -38,14 +55,14 @@ const Header = () => {
             </Link>
           </Grid>
           <Grid item>
-            <Button variant="text">
-              <Typography>Home</Typography>
+            <Button variant="text" className={classes.navButtons}>
+              <Typography className={classes.navLinks}>Home</Typography>
             </Button>
-            <Button variant="text">
-              <Typography>About</Typography>
+            <Button variant="text" className={classes.navButtons}>
+              <Typography className={classes.navLinks}>About</Typography>
             </Button>
-            <Button variant="text">
-              <Typography>Products</Typography>
+            <Button variant="text" className={classes.navButtons}>
+              <Typography className={classes.navLinks}>Products</Typography>
             </Button>
           </Grid>
           <Grid item></Grid>
