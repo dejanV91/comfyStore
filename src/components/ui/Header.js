@@ -5,6 +5,8 @@ import Link from "@mui/material/Link";
 import React from "react";
 
 import logo from "../../images/comfy.jpg";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 
 const useStyles = makeStyles()((theme) => ({
   appBarStyle: {
