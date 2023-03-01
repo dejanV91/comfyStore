@@ -16,5 +16,12 @@ export default createTheme({
   },
   typography: {
     fontFamily: "Roboto",
+
+    h5: {
+      color: `${arcBlack}`,
+      fontFamily: "sans-serif",
+      letterSpacing: "2px",
+      textTransform: "capitalize",
+    },
   },
 });

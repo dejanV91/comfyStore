@@ -2,6 +2,7 @@ import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack/Stack";
 import React from "react";
 
 import logo from "../../images/comfy.jpg";
@@ -15,7 +16,8 @@ const useStyles = makeStyles()((theme) => ({
     alignItems: "center",
   },
   toolbarDiv: {
-    width: "1170px",
+    width: "80%",
+    maxWidth: "1250px",
   },
   gridContainer: {
     alignItems: "center",
@@ -40,6 +42,11 @@ const useStyles = makeStyles()((theme) => ({
     },
     borderRadius: 0,
   },
+  navIcons: {
+    fontSize: "30px",
+    color: theme.palette.common.black,
+  },
+  cartLoginButtons: {},
 }));
 const Header = () => {
   const { classes } = useStyles();
@@ -50,6 +57,7 @@ const Header = () => {
           container
           justifyContent="space-between"
           className={classes.gridContainer}
+          direction="row"
         >
           <Grid item>
             <Link href="/">
@@ -67,7 +75,23 @@ const Header = () => {
               <Typography className={classes.navLinks}>Products</Typography>
             </Button>
           </Grid>
-          <Grid item></Grid>
+
+          {/* Login an Cart buttons Div  */}
+          <Stack
+            item
+            direction="row"
+            className={classes.cartLoginButtons}
+            spacing={3}
+          >
+            <Button direction="row">
+              <Typography variant="h5">Cart</Typography>
+              <ShoppingCartIcon className={classes.navIcons} />
+            </Button>
+            <Button direction="row">
+              <Typography variant="h5">Login</Typography>
+              <PersonAddAlt1Icon className={classes.navIcons} />
+            </Button>
+          </Stack>
         </Grid>
       </Toolbar>
     </AppBar>
