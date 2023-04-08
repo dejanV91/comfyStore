@@ -12,7 +12,6 @@ import {
   Products,
   Private,
 } from "./pages";
-import HomePage from "./pages/HomePage";
 
 function App() {
   return (
