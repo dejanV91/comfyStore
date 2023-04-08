@@ -21,7 +21,7 @@ function App() {
       <Sidebar />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <Home />
         </Route>
         <Route exact path="/about">
           <About />
