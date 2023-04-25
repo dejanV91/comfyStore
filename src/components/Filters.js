@@ -10,7 +10,7 @@ const Filters = () => {
       text,
       company,
       category,
-      color,
+      colors,
       min_price,
       max_price,
       price,
@@ -18,7 +18,13 @@ const Filters = () => {
     },
     updateFilter,
     clearFilter,
+    all_products,
   } = useFilterContext();
+
+  let companies = getUniqueValues(all_products, "company");
+  let categories = getUniqueValues(all_products, "category");
+  let color = getUniqueValues(all_products, "colors");
+
   return (
     <Wrapper>
       <div className="content">
