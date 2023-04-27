@@ -61,9 +61,8 @@ const cart_reducer = (state, action) => {
           }
           return { ...cartItem, amount: newAmount };
         }
-      } else {
-        return cartItem;
       }
+      return cartItem;
     });
     return { ...state, cart: newCart };
   }
@@ -84,6 +83,7 @@ const cart_reducer = (state, action) => {
     return { ...state, total_items, total_amount };
   }
   return state;
+  // eslint-disable-next-line
   throw new Error(`No Matching "${action.type}" - action type`);
 };
 

@@ -5,13 +5,13 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
   const [main, setMain] = useState(images[0]);
   return (
     <Wrapper>
-      <img src={main.url} alt="main image" className="main" />
+      <img src={main.url} alt="main" className="main" />
       <div className="gallery">
         {images.map((image, index) => {
           return (
             <img
               src={image.url}
-              alt="image"
+              alt="item"
               key={index}
               onClick={() => setMain(images[index])}
               className={image.url === main.url ? "active" : null}
